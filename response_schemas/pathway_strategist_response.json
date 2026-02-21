@@ -1,0 +1,38 @@
+{
+  "agent_name": "Pathway Strategist",
+  "agent_id": "69996325730bbd74d53e8acd",
+  "description": "Synthesizes market research and skill gap data into 2-3 ranked investment pathways; calculates projected ROI, time-to-impact, and explains trade-offs between pathways considering budget, time, and learning style",
+  "agent_type": "json",
+  "accessor": "result",
+  "auto_generated": true,
+  "response_schema": {
+    "pathways": [
+      {
+        "pathway_title": "string",
+        "strategy_type": "string",
+        "is_recommended": "boolean",
+        "courses": [
+          {
+            "name": "string",
+            "provider": "string",
+            "cost": "string",
+            "duration": "string",
+            "order": "number"
+          }
+        ],
+        "total_cost": "string",
+        "total_duration": "string",
+        "projected_salary_increase": "string",
+        "time_to_first_impact": "string",
+        "roi_score": "string",
+        "pros": ["string"],
+        "cons": ["string"]
+      }
+    ],
+    "verdict": {
+      "recommended_pathway": "string",
+      "reasoning": "string",
+      "next_steps": ["string"]
+    }
+  }
+}

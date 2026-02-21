@@ -1,0 +1,45 @@
+{
+  "app_name": "Skill Investment Advisor",
+  "agents": {
+    "market_research_agent": {
+      "agent_id": "69996324730bbd74d53e8ac9",
+      "name": "Market Research Agent",
+      "role": "Market Research Specialist",
+      "provider": "perplexity",
+      "model": "sonar-pro",
+      "type": "sub-agent"
+    },
+    "skill_gap_analyst": {
+      "agent_id": "69996324730bbd74d53e8acb",
+      "name": "Skill Gap Analyst",
+      "role": "Skill Gap Analysis Expert",
+      "provider": "openai",
+      "model": "gpt-4.1",
+      "type": "sub-agent"
+    },
+    "pathway_strategist": {
+      "agent_id": "69996325730bbd74d53e8acd",
+      "name": "Pathway Strategist",
+      "role": "Career Pathway Strategist",
+      "provider": "openai",
+      "model": "gpt-4.1",
+      "type": "sub-agent"
+    },
+    "skill_advisory_coordinator": {
+      "agent_id": "699963421b86f70befdb2401",
+      "name": "Skill Advisory Coordinator",
+      "role": "Skill Investment Advisory Coordinator",
+      "provider": "openai",
+      "model": "gpt-4.1",
+      "type": "manager",
+      "managed_agents": [
+        "69996324730bbd74d53e8ac9",
+        "69996324730bbd74d53e8acb",
+        "69996325730bbd74d53e8acd"
+      ]
+    }
+  },
+  "manager_agent_id": "699963421b86f70befdb2401",
+  "workflow_pattern": "manager-subagent",
+  "created_at": "2026-02-21"
+}

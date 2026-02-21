@@ -1,0 +1,180 @@
+{
+  "agent_name": "Skill Advisory Coordinator",
+  "agent_id": "699963421b86f70befdb2401",
+  "description": "Coordinates sub-agents to produce a unified skill investment advisory report; routes user profile data to each sub-agent, aggregates market research, skill gap analysis, and strategic pathways into a comprehensive recommendation",
+  "agent_type": "json",
+  "accessor": "result",
+  "auto_generated": true,
+  "response_schema": {
+    "market_research": {
+      "salary_range": {
+        "entry_level": "string",
+        "mid_level": "string",
+        "senior_level": "string",
+        "currency": "string"
+      },
+      "demand_level": "string",
+      "demand_description": "string",
+      "trending_skills": [
+        "string"
+      ],
+      "recommended_courses": [
+        {
+          "name": "string",
+          "provider": "string",
+          "cost": "string",
+          "duration": "string",
+          "format": "string"
+        }
+      ],
+      "employer_preferences": [
+        "string"
+      ],
+      "market_summary": "string"
+    },
+    "skill_gap_analysis": {
+      "target_role_competencies": [
+        "string"
+      ],
+      "existing_strengths": [
+        "string"
+      ],
+      "skill_gaps": [
+        {
+          "skill_name": "string",
+          "importance": "string",
+          "current_level": "string",
+          "required_level": "string",
+          "gap_severity": "string",
+          "learning_priority": "number"
+        }
+      ],
+      "recommended_learning_order": [
+        "string"
+      ],
+      "gap_summary": "string"
+    },
+    "pathway_strategy": {
+      "pathways": [
+        {
+          "pathway_title": "string",
+          "strategy_type": "string",
+          "is_recommended": "boolean",
+          "courses": [
+            {
+              "name": "string",
+              "provider": "string",
+              "cost": "string",
+              "duration": "string",
+              "order": "number"
+            }
+          ],
+          "total_cost": "string",
+          "total_duration": "string",
+          "projected_salary_increase": "string",
+          "time_to_first_impact": "string",
+          "roi_score": "string",
+          "pros": [
+            "string"
+          ],
+          "cons": [
+            "string"
+          ]
+        }
+      ],
+      "verdict": {
+        "recommended_pathway": "string",
+        "reasoning": "string",
+        "next_steps": [
+          "string"
+        ]
+      }
+    }
+  },
+  "example_response": {
+    "market_research": {
+      "salary_range": {
+        "entry_level": "sample string",
+        "mid_level": "sample string",
+        "senior_level": "sample string",
+        "currency": "sample string"
+      },
+      "demand_level": "sample string",
+      "demand_description": "sample string",
+      "trending_skills": [
+        "sample string"
+      ],
+      "recommended_courses": [
+        {
+          "name": "sample string",
+          "provider": "sample string",
+          "cost": "sample string",
+          "duration": "sample string",
+          "format": "sample string"
+        }
+      ],
+      "employer_preferences": [
+        "sample string"
+      ],
+      "market_summary": "sample string"
+    },
+    "skill_gap_analysis": {
+      "target_role_competencies": [
+        "sample string"
+      ],
+      "existing_strengths": [
+        "sample string"
+      ],
+      "skill_gaps": [
+        {
+          "skill_name": "sample string",
+          "importance": "sample string",
+          "current_level": "sample string",
+          "required_level": "sample string",
+          "gap_severity": "sample string",
+          "learning_priority": 0
+        }
+      ],
+      "recommended_learning_order": [
+        "sample string"
+      ],
+      "gap_summary": "sample string"
+    },
+    "pathway_strategy": {
+      "pathways": [
+        {
+          "pathway_title": "sample string",
+          "strategy_type": "sample string",
+          "is_recommended": false,
+          "courses": [
+            {
+              "name": "sample string",
+              "provider": "sample string",
+              "cost": "sample string",
+              "duration": "sample string",
+              "order": 0
+            }
+          ],
+          "total_cost": "sample string",
+          "total_duration": "sample string",
+          "projected_salary_increase": "sample string",
+          "time_to_first_impact": "sample string",
+          "roi_score": "sample string",
+          "pros": [
+            "sample string"
+          ],
+          "cons": [
+            "sample string"
+          ]
+        }
+      ],
+      "verdict": {
+        "recommended_pathway": "sample string",
+        "reasoning": "sample string",
+        "next_steps": [
+          "sample string"
+        ]
+      }
+    }
+  }
+}

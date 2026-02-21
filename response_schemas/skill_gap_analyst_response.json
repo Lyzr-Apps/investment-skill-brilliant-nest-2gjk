@@ -1,0 +1,24 @@
+{
+  "agent_name": "Skill Gap Analyst",
+  "agent_id": "69996324730bbd74d53e8acb",
+  "description": "Analyzes the user's current degree and qualifications against the target role's required competencies; identifies priority skill gaps ranked by market importance and learning dependency order",
+  "agent_type": "json",
+  "accessor": "result",
+  "auto_generated": true,
+  "response_schema": {
+    "target_role_competencies": ["string"],
+    "existing_strengths": ["string"],
+    "skill_gaps": [
+      {
+        "skill_name": "string",
+        "importance": "string",
+        "current_level": "string",
+        "required_level": "string",
+        "gap_severity": "string",
+        "learning_priority": "number"
+      }
+    ],
+    "recommended_learning_order": ["string"],
+    "gap_summary": "string"
+  }
+}

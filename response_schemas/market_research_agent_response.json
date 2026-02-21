@@ -1,0 +1,30 @@
+{
+  "agent_name": "Market Research Agent",
+  "agent_id": "69996324730bbd74d53e8ac9",
+  "description": "Searches the web for current salary benchmarks for the target role, industry demand trends, course/certification pricing, employer preference data, and time-to-completion estimates",
+  "agent_type": "json",
+  "accessor": "result",
+  "auto_generated": true,
+  "response_schema": {
+    "salary_range": {
+      "entry_level": "string",
+      "mid_level": "string",
+      "senior_level": "string",
+      "currency": "string"
+    },
+    "demand_level": "string",
+    "demand_description": "string",
+    "trending_skills": ["string"],
+    "recommended_courses": [
+      {
+        "name": "string",
+        "provider": "string",
+        "cost": "string",
+        "duration": "string",
+        "format": "string"
+      }
+    ],
+    "employer_preferences": ["string"],
+    "market_summary": "string"
+  }
+}
