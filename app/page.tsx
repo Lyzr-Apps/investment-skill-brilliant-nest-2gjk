@@ -123,7 +123,7 @@ const MANAGER_AGENT_ID = '699963421b86f70befdb2401'
 const SAMPLE_FORM: FormData = {
   currentDegree: 'B.Sc. Computer Science',
   targetRole: 'Senior Data Engineer at FAANG',
-  monthlyBudget: '250',
+  monthlyBudget: '5000',
   weeklyHours: 15,
   learningStyle: 'mixed',
 }
@@ -131,18 +131,18 @@ const SAMPLE_FORM: FormData = {
 const SAMPLE_REPORT: AdvisoryReport = {
   market_research: {
     salary_range: {
-      entry_level: '$85,000 - $110,000',
-      mid_level: '$120,000 - $160,000',
-      senior_level: '$170,000 - $230,000',
-      currency: 'USD',
+      entry_level: '7,00,000 - 9,00,000',
+      mid_level: '10,00,000 - 13,00,000',
+      senior_level: '14,00,000 - 19,00,000',
+      currency: 'INR',
     },
     demand_level: 'Very High',
     demand_description: 'Data Engineering roles have seen a 42% increase in demand over the past 12 months, with FAANG companies leading hiring.',
     trending_skills: ['Apache Spark', 'dbt', 'Snowflake', 'Kubernetes', 'Apache Kafka', 'Terraform'],
     recommended_courses: [
-      { name: 'Data Engineering with Python', provider: 'DataCamp', cost: '$25/mo', duration: '4 months', format: 'Video + Hands-on' },
-      { name: 'Apache Spark Specialization', provider: 'Coursera', cost: '$49/mo', duration: '3 months', format: 'Video Courses' },
-      { name: 'Cloud Data Engineering', provider: 'Udacity', cost: '$399/mo', duration: '4 months', format: 'Project-based' },
+      { name: 'Data Engineering with Python', provider: 'DataCamp', cost: '2,100/mo', duration: '4 months', format: 'Video + Hands-on' },
+      { name: 'Apache Spark Specialization', provider: 'Coursera', cost: '4,100/mo', duration: '3 months', format: 'Video Courses' },
+      { name: 'Cloud Data Engineering', provider: 'Udacity', cost: '33,500/mo', duration: '4 months', format: 'Project-based' },
     ],
     employer_preferences: ['Strong SQL skills', 'Cloud platform experience (AWS/GCP)', 'CI/CD pipeline knowledge', 'Data modeling expertise', 'Communication skills'],
     market_summary: 'The data engineering market is experiencing unprecedented growth. Companies are investing heavily in data infrastructure, creating strong demand for skilled professionals who can build and maintain scalable data pipelines.',
@@ -167,11 +167,11 @@ const SAMPLE_REPORT: AdvisoryReport = {
         strategy_type: 'Fast Track',
         is_recommended: true,
         courses: [
-          { name: 'Cloud Data Engineering Nanodegree', provider: 'Udacity', cost: '$399/mo', duration: '4 months', order: 1 },
-          { name: 'Apache Spark Specialization', provider: 'Coursera', cost: '$49/mo', duration: '3 months', order: 2 },
-          { name: 'Kafka Streams in Practice', provider: 'Confluent', cost: '$0', duration: '2 months', order: 3 },
+          { name: 'Cloud Data Engineering Nanodegree', provider: 'Udacity', cost: '33,500/mo', duration: '4 months', order: 1 },
+          { name: 'Apache Spark Specialization', provider: 'Coursera', cost: '4,100/mo', duration: '3 months', order: 2 },
+          { name: 'Kafka Streams in Practice', provider: 'Confluent', cost: '0', duration: '2 months', order: 3 },
         ],
-        total_cost: '$1,743',
+        total_cost: '1,46,400',
         total_duration: '9 months',
         projected_salary_increase: '35-50%',
         time_to_first_impact: '3-4 months',
@@ -184,12 +184,12 @@ const SAMPLE_REPORT: AdvisoryReport = {
         strategy_type: 'Steady Progress',
         is_recommended: false,
         courses: [
-          { name: 'Data Engineering with Python', provider: 'DataCamp', cost: '$25/mo', duration: '4 months', order: 1 },
-          { name: 'GCP Data Engineering', provider: 'Google Cloud', cost: '$49/mo', duration: '3 months', order: 2 },
-          { name: 'dbt Fundamentals', provider: 'dbt Labs', cost: '$0', duration: '1 month', order: 3 },
-          { name: 'Spark & Scala', provider: 'Udemy', cost: '$14.99', duration: '3 months', order: 4 },
+          { name: 'Data Engineering with Python', provider: 'DataCamp', cost: '2,100/mo', duration: '4 months', order: 1 },
+          { name: 'GCP Data Engineering', provider: 'Google Cloud', cost: '4,100/mo', duration: '3 months', order: 2 },
+          { name: 'dbt Fundamentals', provider: 'dbt Labs', cost: '0', duration: '1 month', order: 3 },
+          { name: 'Spark & Scala', provider: 'Udemy', cost: '1,260', duration: '3 months', order: 4 },
         ],
-        total_cost: '$362',
+        total_cost: '30,400',
         total_duration: '11 months',
         projected_salary_increase: '25-40%',
         time_to_first_impact: '4-5 months',
@@ -200,7 +200,7 @@ const SAMPLE_REPORT: AdvisoryReport = {
     ],
     verdict: {
       recommended_pathway: 'Accelerated Intensive',
-      reasoning: 'Given your budget of $250/month and 15 hours/week availability, the Accelerated Intensive pathway offers the best return on investment. The project-based approach will build a strong portfolio, and the 9-month timeline aligns with current market demand cycles.',
+      reasoning: 'Given your budget of 5,000/month and 15 hours/week availability, the Accelerated Intensive pathway offers the best return on investment. The project-based approach will build a strong portfolio, and the 9-month timeline aligns with current market demand cycles.',
       next_steps: [
         'Enroll in the Cloud Data Engineering Nanodegree within the next week',
         'Set up a GitHub portfolio for showcasing projects',
@@ -440,7 +440,7 @@ function ProfileSummaryBar({
             </Badge>
             <Badge variant="outline" className="font-sans text-xs">
               <FiDollarSign className="mr-1 h-3 w-3" />
-              ${formData.monthlyBudget}/mo
+              {'\u20B9'}{formData.monthlyBudget}/mo
             </Badge>
             <Badge variant="outline" className="font-sans text-xs">
               <FiClock className="mr-1 h-3 w-3" />
@@ -1002,9 +1002,11 @@ export default function Page() {
       const message = `Please analyze and provide skill investment recommendations for:
 - Current Degree/Qualification: ${formData.currentDegree}
 - Target Role: ${formData.targetRole}
-- Monthly Budget: $${formData.monthlyBudget}
+- Monthly Budget: \u20B9${formData.monthlyBudget} INR
 - Weekly Hours Available: ${formData.weeklyHours} hours
-- Preferred Learning Style: ${formData.learningStyle}`
+- Preferred Learning Style: ${formData.learningStyle}
+
+IMPORTANT: All monetary values (salaries, course costs, total costs, ROI projections) must be in Indian Rupees (INR). Use the \u20B9 symbol for currency.`
 
       const result = await callAIAgent(message, MANAGER_AGENT_ID)
 
@@ -1124,12 +1126,12 @@ export default function Page() {
                       Monthly Budget <span className="text-destructive">*</span>
                     </Label>
                     <div className="relative">
-                      <span className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground text-sm">$</span>
+                      <span className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground text-sm">{'\u20B9'}</span>
                       <Input
                         id="budget"
                         type="number"
                         min={1}
-                        placeholder="250"
+                        placeholder="5000"
                         value={formData.monthlyBudget}
                         onChange={(e) => {
                           setFormData((prev) => ({ ...prev, monthlyBudget: e.target.value }))
@@ -1256,7 +1258,7 @@ export default function Page() {
                     <Badge variant="outline" className="text-xs"><FiTarget className="mr-1 h-3 w-3" />{formData.targetRole}</Badge>
                   </div>
                   <div className="flex items-center gap-2">
-                    <Badge variant="outline" className="text-xs"><FiDollarSign className="mr-1 h-3 w-3" />${formData.monthlyBudget}/mo</Badge>
+                    <Badge variant="outline" className="text-xs"><FiDollarSign className="mr-1 h-3 w-3" />{'\u20B9'}{formData.monthlyBudget}/mo</Badge>
                     <Badge variant="outline" className="text-xs"><FiClock className="mr-1 h-3 w-3" />{formData.weeklyHours}h/week</Badge>
                   </div>
                 </CardContent>
